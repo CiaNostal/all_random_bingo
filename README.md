@@ -23,11 +23,12 @@
 以下のURLから閲覧できます。  
 [https://cianostal.github.io/all_random_bingo/](https://cianostal.github.io/all_random_bingo/)
 
+## その他
 
-## ライセンス
-
-MIT
+GungeeSpla氏作成の[赤イクラビンゴ](https://gungeespla.github.io/ikura_bingo/)をフォークして作成しました。
+著作権はGungeeSpla氏に帰属します。
+Copyright (c) 2020 GungeeSpla
 
 ## 作者
 
-[Twitter](https://twitter.com/cn_iine)
+cn [Twitter](https://twitter.com/cn_iine)
