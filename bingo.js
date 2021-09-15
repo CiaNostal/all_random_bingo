@@ -14,13 +14,11 @@ window.is_daily = true;
 window.center_str = 'KUMA';
 window.is_enabled_center_kuma = true;
 window.storage_key = "salmonrun_all_random"
-    // window.is_enabled_stream_mode = false;
 window.dom = {};
 window.click_event = 'ontouchend' in window ? 'ontouchend' : 'onclick';
 const weapon_img_array = ["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "200", "210", "220", "230", "240", "250", "300", "310", "400", "1000", "1010", "1020", "1030", "1100", "1110", "2000", "2010", "2020", "2030", "2040", "2050", "2060", "3000", "3010", "3020", "3030", "3040", "4000", "4010", "4020", "4030", "4040", "5000", "5010", "5020", "5030", "5040", "6000", "6010", "6020"]
-let kuma_weapon = "7000";
 window.save_variables = [
-    'card', 'card_holes', 'player_name', 'player_code',
+    'card', 'card_holes', 'player_name', 'player_code', 'kuma_weapon',
     'is_enabled_center_kuma', 'bingo_num_min', 'bingo_num_max', "is_created_card"
 ];
 window.check_bingo_configs = [{
@@ -49,11 +47,18 @@ window.check_bingo_configs = [{
     },
 ];
 
-
 window.onload = () => {
     load_storage();
+    let kuma_weapon;
+    if (typeof window.kuma_weapon === 'undefined') {
+        kuma_weapon = "7000";
+    } else {
+        kuma_weapon = window.kuma_weapon;
+    }
     console.log(window.card);
     console.log(window.card_holes);
+    console.log("kuma_weapon is " + kuma_weapon);
+    document.getElementById('kuma-weapon').value = kuma_weapon;
     dom.bingo_card_table = document.querySelector('.bingo-card-table-wrapper table');
     dom.bingo_card_cells = dom.bingo_card_table.querySelectorAll('td');
     dom.bingo_card_name = document.querySelector('.bingo-card-name');
@@ -84,30 +89,6 @@ function create_card_button_click() {
         });
         return;
     }
-
-    // is_daily = this.getAttribute('daily') === 'true';
-
-    // let _player_name = dom.player_name_input.value;
-    // let _player_code = str_2_int(_player_name);
-    // if (_player_code === 0) {
-    //     _player_code = new Date().getTime();
-    // }
-    // if (is_daily) {
-    //     _player_code += get_date_code();
-    // }
-    // if (player_code === _player_code) {
-    //     my_alert({
-    //         title: 'ビンゴカードの初期化',
-    //         message: 'ビンゴカードが初期化されます。<br>よろしいですか？',
-    //         ok: init_bingo,
-    //     });
-    // } else {
-    //     my_alert({
-    //         title: 'ビンゴカードの新規作成',
-    //         message: 'ビンゴカードが新しく作られます。<br>数字の並びが変化しますが<br>よろしいですか？',
-    //         ok: init_bingo,
-    //     });
-    // }
     init_bingo();
 }
 
@@ -119,10 +100,6 @@ function cell_click() {
         return;
     }
     let cell_index = parseInt(this.getAttribute('cell-index'));
-    // console.log(cell_index);
-    // if (this.textContent === center_str) {
-    //     return;
-    // }
     let is_hole = card_holes[cell_index];
     if (!is_hole) {
         card_holes[cell_index] = true;
@@ -165,10 +142,6 @@ function update(is_create_hole) {
     card_bingo_num = bingo_num;
     card_reach_num = reach_num;
     card_reach_indexes = reach_indexes;
-    // if (is_enabled_stream_mode) {
-    //     clearTimeout(hidden_card_timer);
-    //     hidden_card_timer = setTimeout(hide_card, hidden_card_delay);
-    // }
 }
 
 /* 
@@ -227,9 +200,6 @@ function init_bingo(is_load) {
             player_code += get_date_code();
         }
     }
-    // console.log('player_name: ' + player_name);
-    // console.log('player_code: ' + player_code);
-    // dom.bingo_card_name.textContent = player_name;
     let xors = new Xors(player_code);
     init_card(xors, is_load);
     is_created_card = true;
@@ -273,9 +243,6 @@ function init_card(xors, is_load) {
         card_holes = create_card_holes();
         // console.log(card_holes.length)
     }
-    // if (is_enabled_center_kuma) {
-    //     card_holes[bingo_card_center_index] = true;
-    // }
     for (let i = 0; i < bingo_card_cell_num; i++) {
         dom.bingo_card_cells[i].classList.remove('hole');
         dom.bingo_card_cells[i].classList.remove('reach');
