@@ -5,7 +5,7 @@
 
 ## 説明
 
-「ビンゴカードを作成」で新しいビンゴが作成されます。
+「ビンゴカードを作る」で新しいビンゴが作成されます。
 各マスに配置されたブキの画像をクリックすると色が変わります、
 タテ・ヨコ・ナナメのいずれかが揃えばビンゴです。
 （ビンゴになっても特に演出などはありません）
@@ -17,17 +17,19 @@
 ざっくりした計算では、平均で30-40WAVEほどやれば1ビンゴは揃うはずです。お気軽に挑戦してみてください。
 ビンゴが揃うまでの耐久配信や、複数人で同時に開始して最初に揃うまでの速さを競う、などの企画も面白いかもしれません。
 
-<!--
+
 ## 閲覧
 
 以下のURLから閲覧できます。  
-[https://gungeespla.github.io/ikura_bingo/](https://gungeespla.github.io/ikura_bingo/)
+[https://cianostal.github.io/all_random_bingo/](https://cianostal.github.io/all_random_bingo/)
 
+<!--
 ## ライセンス
 
 [MIT](https://github.com/GungeeSpla/ikura_bingo/blob/master/LICENSE)
 
+-->
+
 ## 作者
 
-[GungeeSpla](https://github.com/GungeeSpla) ([Twitter](https://twitter.com/GungeeSpla))
--->
+[cn](https://github.com/CiaNostal) ([Twitter](https://twitter.com/cn_iine))
