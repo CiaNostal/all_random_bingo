@@ -23,13 +23,13 @@
 以下のURLから閲覧できます。  
 [https://cianostal.github.io/all_random_bingo/](https://cianostal.github.io/all_random_bingo/)
 
-<!--
+
 ## ライセンス
 
-[MIT](https://github.com/GungeeSpla/ikura_bingo/blob/master/LICENSE)
+MIT
 
--->
+
 
 ## 作者
 
-[cn](https://github.com/CiaNostal) ([Twitter](https://twitter.com/cn_iine))
+ ([Twitter](https://twitter.com/cn_iine))
