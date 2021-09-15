@@ -25,10 +25,9 @@
 
 ## その他
 
-GungeeSpla氏作成の[赤イクラビンゴ](https://gungeespla.github.io/ikura_bingo/)をフォークして作成しました。
+GungeeSpla氏作成の[赤イクラビンゴ](https://gungeespla.github.io/ikura_bingo/)([GitHub](https://github.com/GungeeSpla/ikura_bingo))をフォークして作成しました。
 
 著作権はGungeeSpla氏に帰属します。
-
 Copyright (c) 2020 GungeeSpla
 
 ## 作者
