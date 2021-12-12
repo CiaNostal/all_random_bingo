@@ -63,11 +63,13 @@ window.onload = () => {
     dom.bingo_card_cells = dom.bingo_card_table.querySelectorAll('td');
     dom.bingo_card_name = document.querySelector('.bingo-card-name');
     dom.create_card_button = document.querySelector('.create-card-button');
+    dom.chromakey_setting = document.getElementById('chromakey');
     for (let i = 0; i < bingo_card_cell_num; i++) {
         dom.bingo_card_cells[i].setAttribute('cell-index', i);
         dom.bingo_card_cells[i][click_event] = cell_click;
     }
     dom.create_card_button[click_event] = create_card_button_click;
+    dom.chromakey_setting[click_event] = chromakey_setting_click;
     render_card(card);
     for (let i = 0; i < card.length; i++) {
         if (window.card_holes[i]) {
@@ -77,6 +79,22 @@ window.onload = () => {
     update();
 }
 
+/*
+ * chromakey_setting_click()
+ */
+function chromakey_setting_click() {
+    let checkbox = document.getElementById('chromakey');
+    bingo_card_tables = document.querySelectorAll(".bingo-card-table-wrapper table td");
+    for (let i = 0; i < bingo_card_tables.length; i++) {
+        if (checkbox.checked) {
+            bingo_card_tables[i].style.backgroundColor = "#00FF00";
+        } else {
+            bingo_card_tables[i].style.backgroundColor = "white";
+        }
+    }
+
+
+}
 
 /*
  * create_card_button_click()
