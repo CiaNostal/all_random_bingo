@@ -92,8 +92,6 @@ function chromakey_setting_click() {
             bingo_card_tables[i].style.backgroundColor = "white";
         }
     }
-
-
 }
 
 /*
@@ -139,8 +137,8 @@ function update(is_create_hole) {
     save_storage();
     let [bingo_num, reach_num, reach_indexes] = check_bingo(card_holes);
     if (is_create_hole && bingo_num > 0 && card_bingo_num < bingo_num) {
-        let message = bingo_num + 'ビンゴです！';
-        if (bingo_num === 1) message = 'おめでとうございます！';
+        let message = bingo_num + 'ビンゴです!';
+        if (bingo_num === 1) message = 'おめでとうございます!';
         my_alert({
             title: 'BINGO!',
             message: message,
@@ -148,7 +146,7 @@ function update(is_create_hole) {
     } else if (is_create_hole && reach_num > 0 && card_reach_num < reach_num) {
         my_alert({
             title: 'REACH!',
-            message: reach_num + 'リーチになりました！'
+            message: reach_num + 'リーチになりました!'
         });
     }
     for (let i = 0; i < bingo_card_cell_num; i++) {

@@ -7,7 +7,7 @@ body {
 }
 
 .contents-wrapper {
-    width: 30em;
+    width: 37em;
     margin: 0 auto;
     text-align: center;
     padding: 2em 0;
@@ -68,17 +68,18 @@ body {
 .bingo-card-outer {
     box-sizing: border-box;
     color: #000;
-    /* width: 30em; */
-    padding: 2px 2px 2px 2px;
+    width: 37em;
+    height: 41em;
+    padding: 183px 2px 2px 2px;
     display: inline-block;
     margin: 0 0 0 0;
     /* border-radius: 1em; */
     /* box-shadow: .12em .12em .12em rgba(255, 255, 255, .4) inset, -.12em -.12em .12em rgba(0, 0, 0, .4) inset, .5em .5em 1em rgba(0, 0, 0, .3); */
     background-color: #fff;
     overflow: hidden;
-    background-color: #dad8d8;
-    background-image: url('bingo-card-bg.jpg?6');
-    background-size: auto 100%;
+    /*background-color: #f1efef;*/
+    background-image: url(background.png);
+    background-size: auto 110%;
     background-position: center center;
     background-repeat: no-repeat;
 }
