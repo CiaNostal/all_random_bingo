@@ -84,13 +84,29 @@ window.onload = () => {
  */
 function chromakey_setting_click() {
     let checkbox = document.getElementById('chromakey');
-    bingo_card_tables = document.querySelectorAll(".bingo-card-table-wrapper table td");
+    let bingo_card_tables = document.querySelectorAll(".bingo-card-table-wrapper table td");
     for (let i = 0; i < bingo_card_tables.length; i++) {
         if (checkbox.checked) {
             bingo_card_tables[i].style.backgroundColor = "#00FF00";
         } else {
             bingo_card_tables[i].style.backgroundColor = "white";
         }
+    }
+    let bingo_card_outer = document.querySelector(".bingo-card-outer");
+    if (checkbox.checked) {
+        bingo_card_outer.style.width = "28em";
+        bingo_card_outer.style.height = "29em";
+        bingo_card_outer.style.paddingTop = "2px";
+        bingo_card_outer.style.backgroundColor = "#dddbdb";
+        //bingo_card_outer.style.backgroundImage = "";
+        bingo_card_outer.style.backgroundSize = "1%";
+    } else {
+        bingo_card_outer.style.width = "37em";
+        bingo_card_outer.style.height = "41em";
+        bingo_card_outer.style.paddingTop = "183px";
+        bingo_card_outer.style.backgroundColor = "";
+        bingo_card_outer.style.backgroundImage = "url(background.png)";
+        bingo_card_outer.style.backgroundSize = "110%";
     }
 }
 
