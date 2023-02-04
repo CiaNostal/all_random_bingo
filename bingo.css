@@ -1,9 +1,13 @@
+html {
+    touch-action: manipulation;
+  }
+
 body {
     font-size: 1.1em;
     font-family: sans-serif;
     color: #444;
-    /* background: #fff url('body-bg.png'); */
     background-size: 20em 20em;
+    user-select: none;
 }
 
 .contents-wrapper {
@@ -22,12 +26,8 @@ body {
 .bingo-card-table-wrapper table {
     border-collapse: separate;
     border-spacing: .4em;
-    /* margin-bottom: .4em; */
     table-layout: fixed;
-    /* width: 96%; */
     margin-left: 0%;
-    /* border-color: white;
-    border-width: 1px; */
 }
 
 .bingo-card-table-wrapper table td {
@@ -36,14 +36,13 @@ body {
     background-color: white;
 }
 
+.bingo-card-table-wrapper table img {
+	-webkit-user-drag: none;
+}
+
 .bingo-card-table-wrapper table td.hole {
     background-color: rgba(255, 255, 0) !important;
 }
-
-
-/* .bingo-card-table-wrapper table td.chromakey {
-    background-color: rgb(0, 255, 00);
-} */
 
 .create-card-button {
     user-select: none;
@@ -73,11 +72,8 @@ body {
     padding: 183px 2px 2px 2px;
     display: inline-block;
     margin: 0 0 0 0;
-    /* border-radius: 1em; */
-    /* box-shadow: .12em .12em .12em rgba(255, 255, 255, .4) inset, -.12em -.12em .12em rgba(0, 0, 0, .4) inset, .5em .5em 1em rgba(0, 0, 0, .3); */
     background-color: #fff;
     overflow: hidden;
-    /*background-color: #f1efef;*/
     background-image: url(background.png);
     background-size: auto 110%;
     background-position: center center;
